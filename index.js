@@ -4,6 +4,7 @@ const PORT = process.env.PORT || 3000;
 const morgan = require('morgan');
 const artistRoutes = require('./routes/artists');
 
+app.use(express.json()); // Body parser!
 app.use(morgan('combined'));
 
 app.get('/', (request, response) => {

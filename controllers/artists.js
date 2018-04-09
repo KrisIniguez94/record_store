@@ -13,15 +13,18 @@ const readIndividual = (request, response) => {
 }
 
 const create = (request, response) => {
-  response.send('Testing create.');
+  const artist = artistModel.create(request.body);
+  response.send(artist);
 }
 
 const update = (request, response) => {
-  response.send('Testing update.');
+  const artist = artistModel.update(request.params.id, request.body);
+  response.send(artist);
 }
 
 const destroy = (request, response) => {
-  response.send('Testing destroy.');
+  const artist = artistModel.destroy(request.params.id);
+  response.send(artist);
 }
 
 module.exports = {
