@@ -1,3 +1,5 @@
+// controllers/artists.js
+
 const artistModel = require('../models/artist');
 
 const readAll = (request, response) => {
@@ -19,7 +21,6 @@ const update = (request, response) => {
 const destroy = (request, response) => {
   response.send('Testing destroy.');
 }
-
 
 module.exports = {
   readAll,

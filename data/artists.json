@@ -1,0 +1,16 @@
+[{
+  "id": "1c82ae30-3c1b-11e8-8077-e360124b25c1",
+  "name": "Amy Winehouse",
+  "country": "United Kingdom",
+  "song_ids": [ "b8d6eef0-3c1a-11e8-95bb-dba5b9c41e1e", "cb458fb0-3c1a-11e8-88b4-73f600a3fad1" ]
+  }, {
+  "id": "347c3920-3c1b-11e8-b7aa-ab9b133f296c",
+  "name": "Death Cab for Cutie",
+  "country": "USA",
+  "song_ids": ["0ca78990-3c1b-11e8-a65e-2bd4d7369d03"]
+  }, {
+  "id": "3fcea150-3c1b-11e8-b2f8-2d35aa648477",
+  "name": "Charlie Parker",
+  "country": "USA",
+  "song_ids": []
+}]
