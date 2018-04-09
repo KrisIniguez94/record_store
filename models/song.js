@@ -28,7 +28,17 @@ const create = (artist_id, song) => {
 }
 
 const update = () => {}
-const destroy = () => {}
+
+const destroy = (song_id, artist_id) => {
+  let result;
+  const artistIndex = artists.map( artist => artist.id).indexOf(artist_id);
+  const remainingSongIds = artists[artistIndex].song_ids.filter(id => id !== song_id);
+  const remainingSongs = songs.filter(song => song.id !== song_id);
+  artists[artistIndex].song_ids = remainingSongIds;
+  fs.writeFileSync(artistsPath, JSON.stringify(artists));
+  fs.writeFileSync(songsPath, JSON.stringify(remainingSongs));
+  return song_id; // Should prob return the whole song object
+}
 
 module.exports = {
   readAll,

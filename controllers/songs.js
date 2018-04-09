@@ -18,8 +18,8 @@ const update = (request, response) => {
 }
 
 const destroy = (request, response) => {
-  const song = songModel.destroy(request.params.song_id, request.params.artist_id);
-  response.send(song);
+  const songId = songModel.destroy(request.params.song_id, request.params.artist_id);
+  response.send(songId);
 }
 
 module.exports = {
