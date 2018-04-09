@@ -10,7 +10,14 @@ const readAll = () => {
   return artists;
 }
 
-const readIndividual = () => {}
+const readIndividual = (id) => {
+  const artistsJSON = fs.readFileSync(artistsPath, 'utf8');
+  const artists = JSON.parse(artistsJSON);
+  const filteredArtists = artists.filter( artist => artist.id === id);
+  const artist = filteredArtists[0];
+  return artist;
+}
+
 const create = () => {}
 const update = () => {}
 const destroy = () => {}

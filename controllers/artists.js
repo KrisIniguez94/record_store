@@ -8,7 +8,8 @@ const readAll = (request, response) => {
 }
 
 const readIndividual = (request, response) => {
-  response.send('Testing readIndividual.');
+  const artist = artistModel.readIndividual(request.params.id);
+  response.send(artist);
 }
 
 const create = (request, response) => {
