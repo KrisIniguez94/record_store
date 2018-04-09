@@ -3,7 +3,8 @@
 const artistModel = require('../models/artist');
 
 const readAll = (request, response) => {
-  response.send('Testing readAll.');
+  const artists = artistModel.readAll();
+  response.send(artists);
 }
 
 const readIndividual = (request, response) => {
