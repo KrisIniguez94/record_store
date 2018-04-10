@@ -27,7 +27,19 @@ const create = (artist_id, song) => {
   return song;
 }
 
-const update = () => {}
+const update = (song_id, updates) => {
+  let result;
+  updatedSongs = songs.map( song =>  {
+    if ( song.id === song_id ) {
+      result = { ...song, ...updates }
+      return result;
+    } else {
+      return song;
+    }
+  });
+  fs.writeFileSync(songsPath, JSON.stringify(updatedSongs));
+  return result;
+}
 
 const destroy = (song_id, artist_id) => {
   let result;

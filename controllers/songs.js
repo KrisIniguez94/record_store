@@ -13,7 +13,10 @@ const create = (request, response) => {
 }
 
 const update = (request, response) => {
-  const song = songModel.update(request.params.id, request.body);
+  const song = songModel.update(
+    request.params.song_id,
+    request.body
+  );
   response.send(song);
 }
 
